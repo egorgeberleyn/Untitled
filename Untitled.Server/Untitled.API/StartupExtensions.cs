@@ -14,7 +14,7 @@ public static class StartupExtensions
         return services;
     }
     
-    private static IServiceCollection AddSwagger(this IServiceCollection services)
+    private static void AddSwagger(this IServiceCollection services)
     {
         services.AddSwaggerGen(c =>
         {
@@ -38,6 +38,5 @@ public static class StartupExtensions
                 {securityScheme, Array.Empty<string>()}
             });
         });
-        return services;
     }
 }
