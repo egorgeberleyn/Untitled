@@ -1,4 +1,9 @@
-import { extendTheme } from "@chakra-ui/react";
+import { ThemeConfig, extendTheme } from "@chakra-ui/react";
+
+const config: ThemeConfig = {
+  initialColorMode: 'light',
+  useSystemColorMode: true,
+}
 
 const colors = {
   noble_black: {
@@ -86,11 +91,16 @@ const colors = {
 
 export const theme = extendTheme({
   styles: {
-    global: {     
+    global: {
+      html: {
+        margin: 0,
+        padding: 0,
+        boxSizing: 'border-box'
+      },
       body: {
         bg: "noble_black.700",
         color: "white",
-        fontFamily: 'Plus Jakarta Sans, sans-serif'
+        fontFamily: "Plus Jakarta Sans, sans-serif",       
       },
       a: {
         color: "teal.500",
@@ -102,4 +112,5 @@ export const theme = extendTheme({
     },
   },
   colors,
+  config,
 });
