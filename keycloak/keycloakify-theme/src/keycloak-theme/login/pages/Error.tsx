@@ -1,4 +1,4 @@
-import type { PageProps } from "keycloakify/login/pages/PageProps";
+import { PageProps } from "keycloak-theme/PageProps";
 import type { KcContext } from "../kcContext";
 import type { I18n } from "../i18n";
 import bgImg from "../assets/Illustration2.png";
@@ -10,14 +10,14 @@ export default function Error(
 
   const { message, client } = kcContext;
 
-  const { msg } = i18n;
+  const { msg, msgStr } = i18n;
 
   return (
     <Template
       {...{ kcContext, i18n, doUseDefaultCss, classes }}
       displayMessage={false}
       headerNode={null}
-      headerTitle={msg("errorTitle")}
+      headerTitle={msgStr("errorTitle")}
       bgImg={bgImg}
       formWidth="40%"
       bgImgWidth="60%"

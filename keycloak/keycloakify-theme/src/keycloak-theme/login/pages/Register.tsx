@@ -1,6 +1,6 @@
 // ejected using 'npx eject-keycloak-page'
 import { clsx } from "keycloakify/tools/clsx";
-import type { PageProps } from "keycloakify/login/pages/PageProps";
+import { PageProps } from "keycloak-theme/PageProps";
 import { useGetClassName } from "keycloakify/login/lib/useGetClassName";
 import type { KcContext } from "../kcContext";
 import type { I18n } from "../i18n";

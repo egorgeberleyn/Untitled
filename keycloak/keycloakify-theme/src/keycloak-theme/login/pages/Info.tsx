@@ -1,5 +1,5 @@
 import { assert } from "keycloakify/tools/assert";
-import type { PageProps } from "keycloakify/login/pages/PageProps";
+import { PageProps } from "keycloak-theme/PageProps";
 import type { KcContext } from "../kcContext";
 import type { I18n } from "../i18n";
 import bgImg from "../assets/Illustration2.png";

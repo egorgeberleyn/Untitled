@@ -2,7 +2,7 @@
 import { useState, type FormEventHandler } from "react";
 import { clsx } from "keycloakify/tools/clsx";
 import { useConstCallback } from "keycloakify/tools/useConstCallback";
-import type { PageProps } from "keycloakify/login/pages/PageProps";
+import { PageProps } from "keycloak-theme/PageProps";
 import { useGetClassName } from "keycloakify/login/lib/useGetClassName";
 import type { KcContext } from "../kcContext";
 import type { I18n } from "../i18n";
@@ -11,6 +11,7 @@ import {HiOutlineMail} from "react-icons/hi";
 import {AiOutlineEye, AiOutlineEyeInvisible} from "react-icons/ai";
 import { Divider } from "@mui/material"
 import bgImg from "../assets/Illustration.png";
+
 
 export default function Login(props: PageProps<Extract<KcContext, { pageId: "login.ftl" }>, I18n>) {
     const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
