@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,700&display=swap");
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.sb-show-main.sb-main-padded {
+  padding: 0;
+}
+
+.login-pf {
+  background: none;
+}
+
+.my-font {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.my-root-class {
+  background: white;
+}
+
+.my-root-class body {
+  background: #131619;
+  height: 100%;
+}
+
+.kcFormCardClass {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.kcLoginClass {
+  display: flex;
+  flex-direction: row;
+  background: #131619;
+  height: 100%;
+}
+
+.login-pf-page .card-pf {
+  padding: 0;
+  margin-left: 105px;
+  width: 70%;
+}
+
+.login-pf-page {
+  padding-top: 0;
+}
+
+.card-pf {
+  width: 100%;
+  max-width: none;
+}
+
+.login-pf-page .login-pf-page-header {
+  margin-bottom: 0px;
+}
+
+.login-pf-page .login-pf-page-header p {
+  font-size: 18px;
+  text-transform: none;
+  color: #9b9c9e;
+}
+
+/*-------------------------Header-------------------------------*/
+
+.kcHeaderWrapperClass {
+  text-align: left;
+  margin-left: 100px;
+  width: 60%;
+}
+
+.kcHeaderWrapperClass span {
+  font-size: 36px;
+  text-transform: none;
+  line-height: 44px;
+  letter-spacing: 0.15px;
+}
+
+.kcHeaderWrapperClass .header-subtitle {
+  font-size: 18px;
+  text-transform: none;
+  color: #9b9c9e;
+  letter-spacing: 0.15px;
+}
+
+.kcHeaderWrapperClass .special-title {
+  font-weight: 700;
+  background: linear-gradient(45deg, #4d62e5 0%, #87ddee 45.31%, #b6f09c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.15px;
+}
+
+/*-------------------------Forms-------------------------------*/
+
+.kcFormCardClass {
+  background-color: #131619;
+  border-radius: 0px;
+}
+
+.kcFormCardClass span {
+  color: #686b6e;
+  border-radius: 0px;
+}
+
+.kcFormCardClass .kc-feedback-text {
+  font-weight: 500;
+  border-radius: 0px;
+  font-size: 13px;
+  color: #0c1132;
+}
+
+.kcFormOptionsWrapperClass span a {
+  background: linear-gradient(45deg, #82dbf7 0%, #b6f09c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+}
+
+.kcInputClass {
+  background: #1a1d21;
+  color: white;
+  border-radius: 8px;
+  border: 1px solid #363a3d;
+  font-size: 14px;
+
+  width: 100%;
+  border-radius: 4px;
+  padding: 16px 0;
+  padding-left: 30px;
+  font-size: 16px;
+  text-overflow: ellipsis;
+}
+
+.kcInputClass::placeholder {
+  font-style: normal;
+  color: #9b9c9e;
+}
+
+.kcLabelClass {
+  display: none;
+}
+
+.input-container {
+  display: flex;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.icon {
+  position: absolute;
+  left: 5px;
+  top: 7px;
+  width: 19px;
+  height: 22px;
+  color: #686b6e;
+}
+
+.passwordEye {
+  position: absolute;
+  right: 5px;
+  top: 7px;
+  width: 21px;
+  height: 23px;
+  color: #686b6e;
+  cursor: pointer;
+}
+
+.login-pf-page .login-pf-signup {
+  margin-top: 20px;
+}
+
+/*-------------------------Remember me-------------------------------*/
+.checkboxLabel input {
+  width: 18px;
+  height: 18px;
+  accent-color: #b6f09c;
+  opacity: 15%;
+}
+
+.checkboxLabel input:hover {
+  accent-color: #97f06f;
+}
+
+.checkboxLabel input:active {
+  accent-color: #cbf0ba;
+  opacity: 15%;
+}
+
+.checkboxLabel input:checked {
+  opacity: 100%;
+}
+
+.checkboxLabel span {
+  margin-left: 10px;
+  margin-top: 1px;
+}
+
+#kc-form-options span {
+  color: #cdcecf;
+  font-size: 15px;
+}
+
+/*---------------------------Footer------------------------------*/
+
+.kcButtonClass {
+  background: #b6f09c;
+  border-radius: 12px;
+  border: none;
+  color: #0c1132;
+  padding: 10px 0;
+}
+
+.kcButtonClass:hover {
+  color: #0c1132;
+  border: none;
+  background: #82f792;
+}
+
+.kcButtonClass:active {
+  background: #82f792;
+}
+
+.kcButtonClass:active {
+  background: #82f792;
+}
+
+.kcButtonClass:focus {
+  background: #82f792;
+}
+
+#kc-registration span {
+  color: #686b6e;
+  font-size: 18px;
+}
+
+#kc-registration span a {
+  background: linear-gradient(45deg, #82dbf7 0%, #b6f09c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 16px;
+}
+
+#kc-info {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.alert {
+  border-radius: 8px;
+}
+
+/*-------------------------Locale-------------------------------*/
+
+.login-pf-page .login-pf-header {
+  margin-bottom: 0px;
+  display: inline;
+}
+
+#kc-locale ul {
+  background-color: #171717;
+  border-radius: 4px;
+}
+
+#kc-locale ul li a {
+  color: #ffffff !important;
+}
+
+#kc-locale ul li a:hover {
+  color: white !important;
+  background: #82f792;
+}
+
+#kc-locale-dropdown a {
+  color: #cdcecf;
+  font-size: 14px;
+}
+
+a#kc-current-locale-link::after {
+  content: "🌏";
+  margin-left: 4px;
+  opacity: 0.8;
+}
+
+/*-------------------------Social-------------------------------*/
+
+#kc-social-providers ul {
+  margin-top: 35px;
+}
+
+.login-pf-page .login-pf-social-link a {
+  background: #1a1d21;
+  border-radius: 12px;
+  text-align: center;
+  color: #686b6e;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Plus Jakarta Sans";
+  padding: 7px 0;
+}
+
+.login-pf-page .login-pf-social-link a:hover {
+  background: #82f792;
+}
+
+.login-pf-page .login-pf-social-link a span {
+  color: #686b6e;
+  padding-left: 35px;
+}
+
+.login-pf-page .login-pf-social-section:last-of-type {
+  padding-left: 0;
+  border-left: none;
+}
+
+.login-pf-page .login-pf-social-section:first-of-type {
+  padding-right: 0px;
+  border-right: none;
+  margin-right: 0px;
+}
+
+@media (min-width: 768px) {
+  .col-sm-6 {
+    width: 100%;
+  }
+
+  .login-pf-page .login-pf-social-section {
+    -ms-flex: none;
+    flex: none;
+    max-width: 100%;
+  }
+}
+
+.zocial.google:before {
+  content: url("/public/google-icon.png");
+  height: 0;
+  width: 70%;
+}
+
+.zocial.twitter:before {
+  content: url("/public/twitter-icon.png");
+  height: 0;
+  width: 70%;
+}
+
+.zocial.microsoft:before {
+  content: "";
+}
+
+.zocial.facebook:before {
+  content: "";
+}
+
+.zocial.instagram:before {
+  content: "";
+}
+
+/*-------------------------Register-------------------------------*/
+
+.form-horizontal .form-group {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.form-group {
+  margin-bottom: 0px;
+}
+
+.kcFormOptions span {
+  text-align: end;
+}
+
+.kcBackToLoginBtn {
+  background: linear-gradient(45deg, #82dbf7 0%, #b6f09c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 16px;
+
+  padding: 0;
+}
+
+.kcFormButtonsClass {
+  padding: 0;
+}
+
+/*-------------------------Verify email-------------------------------*/
+
+.instruction-wrapper {
+  font-size: 17px;
+}
+
+
+
+.sendBtn {
+  background: #b6f09c;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.sendBtn:hover {
+  text-decoration: none;
+  background: #82f792;
+  color: #0c1132;
+}
+
+.sendBtn span {
+  color: #0c1132;
+}
+
+.instruction .email {
+  color: white;
+  background: linear-gradient(45deg, #82dbf7 0%, #b6f09c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.email {
+  font-style: italic;
+  font-weight: normal;
+}
