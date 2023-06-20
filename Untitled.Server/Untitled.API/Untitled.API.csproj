@@ -18,4 +18,8 @@
       <ProjectReference Include="..\Untitled.Contracts\Untitled.Contracts.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Logs\" />
+    </ItemGroup>
+
 </Project>
