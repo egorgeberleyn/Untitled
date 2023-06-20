@@ -1,5 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Versioning;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Untitled.API;
 
@@ -10,6 +14,7 @@ public static class StartupExtensions
         services.AddControllers();
         services.AddEndpointsApiExplorer();
         services.AddSwagger();
+        services.AddApiVersioning();
         
         return services;
     }
@@ -37,6 +42,25 @@ public static class StartupExtensions
             {
                 {securityScheme, Array.Empty<string>()}
             });
+        });
+
+        services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
+    }
+
+    private static void AddApiVersioning(this IServiceCollection services)
+    {
+        services.AddApiVersioning(options =>
+        {
+            options.AssumeDefaultVersionWhenUnspecified = true;
+            options.DefaultApiVersion = new ApiVersion(1, 0);
+            options.ReportApiVersions = true;
+            options.ApiVersionReader = new UrlSegmentApiVersionReader();
+        });
+
+        services.AddVersionedApiExplorer(options =>
+        {
+            options.GroupNameFormat = "'v'VVV";
+            options.SubstituteApiVersionInUrl = true;
         });
     }
 }
