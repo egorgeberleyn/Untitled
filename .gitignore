@@ -265,3 +265,4 @@ FakesAssemblies/
 # Custom files and directories
 .idea/
 /db-data
+/Untitled.Server/Untitled.API/Logs

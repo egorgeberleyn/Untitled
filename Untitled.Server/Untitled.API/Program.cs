@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Serilog;
 using Untitled.API;
 using Untitled.Application;
 using Untitled.Infrastructure;
@@ -8,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
     builder.Services
         .AddPresentation()
         .AddApplication()
-        .AddInfrastructure(builder.Configuration);
+        .AddInfrastructure(builder.Configuration, builder.Host);
 }
 
 var app = builder.Build();
@@ -27,6 +28,7 @@ var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>()
 
     app.UseHttpsRedirection();
     app.UseApiVersioning();
+    app.UseSerilogRequestLogging();
 
     app.UseAuthentication();
     app.UseAuthorization();
