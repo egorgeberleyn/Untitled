@@ -3,6 +3,7 @@ using Keycloak.AuthServices.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Serilog;
 
 namespace Untitled.Infrastructure;
@@ -30,7 +31,7 @@ public static class StartupExtensions
     }
 
     private static void AddLogging(this IServiceCollection services, IConfiguration configuration,
-        ConfigureHostBuilder host)
+        IHostBuilder host)
     {
          var logger = new LoggerConfiguration()
             .ReadFrom.Configuration(configuration)
