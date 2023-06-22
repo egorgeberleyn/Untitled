@@ -1,6 +1,7 @@
 ﻿using Keycloak.AuthServices.Authentication;
 using Keycloak.AuthServices.Authorization;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -16,12 +17,20 @@ public static class StartupExtensions
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration,
         ConfigureHostBuilder host)
     {
+
         services.AddQueries();
+        services.AddPersistence(configuration);
         services.AddKeycloak(configuration);
         services.AddLogging(configuration, host);
         
         services.TryDecorate(typeof(ICommandHandler<>), typeof(LoggingCommandHandlerDecorator<>));
         return services;
+    }
+
+    private static void AddPersistence(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddDbContext<DbContext>(
+            options => options.UseNpgsql(configuration.GetConnectionString("PgConnection")));
     }
 
     private static void AddKeycloak(this IServiceCollection services, IConfiguration configuration)
@@ -39,7 +48,7 @@ public static class StartupExtensions
     private static void AddLogging(this IServiceCollection services, IConfiguration configuration,
         IHostBuilder host)
     {
-         var logger = new LoggerConfiguration()
+        var logger = new LoggerConfiguration()
             .ReadFrom.Configuration(configuration)
             .CreateLogger();
 
