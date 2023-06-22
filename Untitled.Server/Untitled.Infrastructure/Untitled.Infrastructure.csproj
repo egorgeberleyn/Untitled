@@ -17,4 +17,8 @@
       <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Untitled.Shared\Untitled.Shared.csproj" />
+    </ItemGroup>
+
 </Project>
