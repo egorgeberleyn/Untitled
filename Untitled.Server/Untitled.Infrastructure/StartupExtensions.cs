@@ -3,7 +3,11 @@ using Keycloak.AuthServices.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Serilog;
+using Untitled.Infrastructure.Decorators;
+using Untitled.Shared.Abstractions.Commands;
+using Untitled.Shared.Queries;
 
 namespace Untitled.Infrastructure;
 
@@ -12,8 +16,11 @@ public static class StartupExtensions
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration,
         ConfigureHostBuilder host)
     {
+        services.AddQueries();
         services.AddKeycloak(configuration);
         services.AddLogging(configuration, host);
+        
+        services.TryDecorate(typeof(ICommandHandler<>), typeof(LoggingCommandHandlerDecorator<>));
         return services;
     }
 
@@ -30,7 +37,7 @@ public static class StartupExtensions
     }
 
     private static void AddLogging(this IServiceCollection services, IConfiguration configuration,
-        ConfigureHostBuilder host)
+        IHostBuilder host)
     {
          var logger = new LoggerConfiguration()
             .ReadFrom.Configuration(configuration)

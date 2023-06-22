@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Untitled.Infrastructure\Untitled.Infrastructure.csproj" />
+      <ProjectReference Include="..\Untitled.Shared\Untitled.Shared.csproj" />
     </ItemGroup>
 
 </Project>
